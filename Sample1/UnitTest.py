@@ -52,8 +52,14 @@ class DemoLogin(unittest.TestCase):
         print(driver.find_element_by_xpath('//*[@id="navuser"]/li[3]/a/span[2]').text)
         
         # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!This element can not be found !???????????????????????????????????????
+        
+        
         print(driver.find_element_by_xpath('//*[@id="navuser"]/li[4]/a/span[2]').text) 
+        
+        print(driver.find_element_by_css_selector('#navuser li.btn-logout.has-icon a span.nav-title').text)
+                
         print (driver.find_element_by_css_selector('#navuser.nav.navbar-nav li.btn-logout.has-icon').text)
+        
         print (driver.find_element_by_css_selector('#navuser.nav.navbar-nav li.btn-logout.has-icon a span.nav-title').text)
         
         
