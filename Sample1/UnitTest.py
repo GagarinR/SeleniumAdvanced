@@ -24,7 +24,7 @@ def getSearchBy(pagename,elementkey):
 
 print (getSearchValue("LoginPage","LoginPassword"))
 print (getSearchBy("LoginPage","LoginUserName"))
-
+ 
 class DemoLogin(unittest.TestCase):
     def setUp(self): # specially for UnitTest
         self.driver = webdriver.Chrome(executable_path="chromedriver.exe")
@@ -45,8 +45,18 @@ class DemoLogin(unittest.TestCase):
         loginbutton.click()
         profilebutton = driver.find_element_by_xpath("/html/body/header/div/div/div[2]/button[3]/span[2]")
         profilebutton.click()
-        print (driver.find_element_by_xpath('//*[@id="navuser"]/li[4]/a/span[2]').text)
-        # // *[ @ id = "navuser"] / li[4] / a / span[2]
+        
+        
+        print (driver.find_element_by_xpath('//*[@id="navuser"]/li[1]/a/span[2]').text)
+        print(driver.find_element_by_xpath('//*[@id="navuser"]/li[2]/a/span[2]').text)
+        print(driver.find_element_by_xpath('//*[@id="navuser"]/li[3]/a/span[2]').text)
+        
+        # This element can not be found !????????????
+        print(driver.find_element_by_xpath('//*[@id="navuser"]/li[4]/a/span[2]').text) 
+        
+        
+        
+        
         # self.assertIn(driver.find_element_by_xpath('//*[@id="navuser"]/li[4]/a/span[2]'),'Log')
 
 if __name__ == "__main__":
