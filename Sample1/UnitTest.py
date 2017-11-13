@@ -35,12 +35,12 @@ class DemoLogin(unittest.TestCase):
 
     def test_anytexthere(self):
         driver = self.driver
-        driver.get("http://demo.mahara.org/")
+        driver.get("http://demo/")
         self.assertIn("Home - Mahara",  driver.title)
         username = driver.find_element_by_id(getSearchValue("LoginPage","LoginUserName"))
         username.send_keys("admin")
         password = driver.find_element_by_id(getSearchValue("LoginPage", "LoginPassword"))
-        password.send_keys("MaharaDemo")
+        password.send_keys("Demo")
         loginbutton=driver.find_element_by_id(getSearchValue("LoginPage","SubmitButton"))
         loginbutton.click()
         profilebutton = driver.find_element_by_xpath("/html/body/header/div/div/div[2]/button[3]/span[2]")
