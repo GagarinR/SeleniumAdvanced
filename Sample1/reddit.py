@@ -25,13 +25,10 @@ if driver.find_element_by_xpath("(//*[@class='nextprev'])[2]/a").is_displayed():
 
             arr= driver.find_elements_by_xpath("//*[@class = 'contents']//*[@class='search-result-header']/a")
             for i in arr:
-
                 print s1 in i.text
 
             page += 1
             print 'page: ', page
-
-
             driver.find_element_by_xpath("//*[@class='nextprev']/a[2]").click()
             driver.implicitly_wait(2)
 
